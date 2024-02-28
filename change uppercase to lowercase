@@ -1,0 +1,35 @@
+package Placement;
+
+public class Lowercase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="MYCODE";
+		String s1=myLowerCase(s);
+		System.out.println(s1);
+	
+
+	}
+
+	private static String myLowerCase(String s) {
+		
+		String lowercase="";
+		for(int i=0; i<s.length() ;i++)
+		{
+			char ch = s.charAt(i);
+			if(ch >= 'A' && ch <='Z')
+			{
+				int num=ch;
+				num=num+32;
+				ch=(char)num;
+				lowercase+=ch;
+				
+			}
+			else
+				lowercase=lowercase+ch;
+		}
+		return lowercase;
+	}
+
+}
